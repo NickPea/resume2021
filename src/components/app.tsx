@@ -1,19 +1,19 @@
 //
 //
 
-import React from "react";
+import { CssBaseline } from "@material-ui/core";
+import React, { Fragment } from "react";
 import ReactDom from "react-dom";
-
-//CSS
-//
-
-import "../index.css";
-
-// import CssBaseline from "@material-ui/core/CssBaseline";
-import LandingPageTemplate from "./pages/landing/template";
+import PageRouter from "./page-router";
 
 const App = () => {
-  return <LandingPageTemplate />;
+  return (
+    <Fragment>
+      <CssBaseline>
+        <PageRouter />
+      </CssBaseline>
+    </Fragment>
+  );
 };
 
 ReactDom.render(<App />, document.querySelector("#root"));

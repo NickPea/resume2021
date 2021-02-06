@@ -3,7 +3,7 @@
 //plugins
 const path = require("path");
 const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 //config
@@ -13,7 +13,7 @@ module.exports = {
 
   plugins: [
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename: "index.[contenthash].css" }),
+    // new MiniCssExtractPlugin({ filename: "index.[contenthash].css" }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
@@ -31,14 +31,21 @@ module.exports = {
       {
         test: /.css$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: "css-loader",
-          },
+          // {
+          //   loader: MiniCssExtractPlugin.loader,
+          // },
+          "style-loader",
+          "css-loader",
         ],
-      }, //css
+      },
+      //images/*
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader",
+        options: {
+          name: "/files/[name].[ext]",
+        },
+      },
     ], //rules
   }, //modules
 
