@@ -9,13 +9,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 //config
 module.exports = {
   mode: "development",
-  entry: "./src/index.ts",
+  entry: "./src/app.tsx",
 
   plugins: [
     new webpack.ProgressPlugin(),
     // new MiniCssExtractPlugin({ filename: "index.[contenthash].css" }),
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: "src/app.html",
     }),
   ],
 

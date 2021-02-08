@@ -15,6 +15,7 @@ const DivWrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  padding:10px;
 `;
 const StyledAvatar = styled(Avatar)`
   margin-right: 10px;
@@ -22,7 +23,6 @@ const StyledAvatar = styled(Avatar)`
 const NameTitle = styled.h1`
   color: rgb(94, 94, 94);
   font-size: 2rem;
-  font-weight: lighter;
 `;
 
 //render

@@ -5,19 +5,18 @@
 import React from "react";
 
 //router
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 //pages
-import LandingPageTemplate from "./pages/landing/template";
-import AboutPageTemplate from "./pages/about/template";
-import CredentialsPageTemplate from "./pages/credentials/template";
-import ContactPageTemplate from "./pages/contact/template";
+import LandingPageTemplate from "../pages/landing/template";
+import AboutPageTemplate from "../pages/about/template";
+import CredentialsPageTemplate from "../pages/credentials/template";
+import ContactPageTemplate from "../pages/contact/template";
 
-//render
-const PageRouter = () => {
+// app router
+export default () => {
   return (
     <BrowserRouter>
-      {/* SPA Routes */}
       <Switch>
         <Route exact path="/">
           <LandingPageTemplate /> {/* Home */}
@@ -32,9 +31,6 @@ const PageRouter = () => {
           <ContactPageTemplate />
         </Route>
       </Switch>
-      {/* SPA Routes */}
     </BrowserRouter>
   );
 };
-
-export default PageRouter;

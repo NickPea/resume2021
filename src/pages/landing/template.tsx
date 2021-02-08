@@ -11,6 +11,8 @@ import styled from "styled-components";
 //components
 import CareerTitle from "./career-title";
 import NameTitle from "./name-title";
+import Summary from "./summary";
+import StartApp from "./start-up";
 
 //styles
 const LayoutWrapper = styled.div`
@@ -32,7 +34,7 @@ export default () => {
             <CareerTitle />
           </Grid>
           <Grid item xs={12}>
-            {/* skill summary */}
+            <Summary />
           </Grid>
         </Grid>
         {/* //container */}
