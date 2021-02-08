@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
+    "dev-server": "webpack serve --open",
     "clean": "rm -r dist",
     "clean-watch": "npm run clean && npm run watch"
   },
