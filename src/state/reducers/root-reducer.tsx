@@ -5,9 +5,11 @@
 import { combineReducers } from "redux";
 
 //reducers
-import startUpReducer from "./start-up-reducer";
+import { appReducer } from "./app-reducer";
+import { landingPageReducer } from "./landing-page-reducer";
 
 //root reducer
 export default combineReducers({
-  app: startUpReducer,
+  app: appReducer,
+  landing_page: landingPageReducer,
 });

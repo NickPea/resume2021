@@ -6,7 +6,8 @@
     "target": "es5",
     "allowJs": true,
     "jsx": "react",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    // "inlineSourceMap": true
   },
   "files": [
     "src/app.tsx"

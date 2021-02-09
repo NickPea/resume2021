@@ -19,13 +19,13 @@ const app = express();
 //static
 app.use(express.static("../dist"));
 
+//API
+app.use('/api', apiRouter);
+
 //SPA
 app.use("/", (req, res) => {
   res.sendFile(path.resolve("../dist/index.html"));
 });
-
-//API
-app.use('/api', apiRouter);
 
 //listen
 const port = process.env.PORT

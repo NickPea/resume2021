@@ -2,7 +2,7 @@
  * LANDING TEMPLATE
  */
 
-import React from "react";
+import React, { useEffect } from "react";
 
 //imports
 import { Avatar, Container, Grid, Typography } from "@material-ui/core";
@@ -12,7 +12,8 @@ import styled from "styled-components";
 import CareerTitle from "./career-title";
 import NameTitle from "./name-title";
 import Summary from "./summary";
-import StartApp from "./start-up";
+import SkillSet from "./skill-set";
+import { useDispatch, useSelector } from "react-redux";
 
 //styles
 const LayoutWrapper = styled.div`
@@ -21,6 +22,11 @@ const LayoutWrapper = styled.div`
 
 //render
 export default () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({ type: "APP->SAGA:LANDING-PAGE/HYDRATE" });
+  }, []);
+
   return (
     <React.Fragment>
       {/*  */}
@@ -35,6 +41,9 @@ export default () => {
           </Grid>
           <Grid item xs={12}>
             <Summary />
+          </Grid>
+          <Grid item xs={12}>
+            <SkillSet />
           </Grid>
         </Grid>
         {/* //container */}

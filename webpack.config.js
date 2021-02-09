@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 //config
 module.exports = {
   mode: "development",
-  entry: "./src/app.tsx",
+  entry: { bundle: "./src/app.tsx" },
 
   plugins: [
     new webpack.ProgressPlugin(),
@@ -18,6 +18,9 @@ module.exports = {
       template: "src/app.html",
     }),
   ],
+
+  // devtool: "inline-source-map",
+  devServer: {},
 
   module: {
     rules: [
@@ -43,7 +46,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: "file-loader",
         options: {
-          name: "/files/[name].[ext]",
+          name: "images/[name].[ext]",
         },
       },
     ], //rules

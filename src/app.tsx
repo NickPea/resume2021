@@ -4,7 +4,7 @@
  * APP & RENDER
  */
 
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 import ReactDom from "react-dom";
 
 //State
@@ -23,7 +23,7 @@ const App = ({ children }) => {
   useEffect(() => {
     dispatch({ type: "APP->SAGA:APP/START" });
   }, []);
-  return <>{children}</>;
+  return <Fragment>{children}</Fragment>;
 }; //
 
 //Render
