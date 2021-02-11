@@ -7,7 +7,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "Node",
-    // "inlineSourceMap": true
+    "inlineSourceMap": true
   },
   "files": [
     "src/app.tsx"

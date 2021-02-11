@@ -9,10 +9,10 @@ import ReactDom from "react-dom";
 
 //State
 import { Provider, useDispatch } from "react-redux";
-import store from "./state/redux-store";
+import store from "./state/store";
 
 //Router
-import AppRouter from "./router/react-router";
+import Routes from "./routes";
 
 //CSS (Global)
 import "./app.css";
@@ -30,7 +30,7 @@ const App = ({ children }) => {
 ReactDom.render(
   <Provider store={store}>
     <App>
-      <AppRouter />
+      <Routes />
     </App>
   </Provider>,
   document.querySelector("#root")
