@@ -10,7 +10,9 @@ import webpackURL from "./webpack.svg";
 import gitURL from "./git.svg";
 import styledComponentsURL from "./styled-components.png";
 import npmURL from "./npm.svg";
-import dockerURL from './docker.svg'
+import dockerURL from './docker.svg';
+import awsURL from './AWS.png';
+
 
 export default [
   {name: "React", url: reactURL},
@@ -22,4 +24,5 @@ export default [
   {name: "Styled Components", url: styledComponentsURL},
   {name: "Node Package Manager", url: npmURL},
   {name: "Docker", url: dockerURL},
+  {name: "Amazon Web Services", url: awsURL},
 ];

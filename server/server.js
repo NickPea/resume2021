@@ -28,7 +28,7 @@ app.use("/", (req, res) => {
 });
 
 //listen
-const port = process.env.PORT
+const port = process.env.NODE_SERVER_PORT
 app.listen(port, () => {
   console.log(`__ Node Server Running on Port:${port} __`);
 });
