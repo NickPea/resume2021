@@ -81,7 +81,7 @@ export default () => {
               <IconMarginRight>
                 <PhoneAndroidOutlinedIcon />
               </IconMarginRight>
-              <SubText>0493 987 804</SubText>
+              <SubText>0492 987 804</SubText>
             </ContactItem>
           </Slide>
           <SubText>- OR -</SubText>
